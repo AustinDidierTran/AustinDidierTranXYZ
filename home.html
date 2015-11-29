@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin-Didier Tran XYZ</title>
+
+    <!-- Paper-Elements imports -->
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+
+    <!-- Iron-Elements imports -->
+
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="austindidiertran.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+
+</head>
+
+<body>
+
+    <template id="awareness" is="dom-bind">
+        <paper-toolbar id="top-toolbar">
+            <h1 id="title">Austin-Didier Tran</h1>
+        </paper-toolbar>
+        <paper-tabs noink no-bar selected="{{selected}}">
+            <paper-tab>Experiences professionnelles</paper-tab>
+            <paper-tab>Connaissances</paper-tab>
+            <paper-tab>Articles de blog</paper-tab>
+        </paper-tabs>
+
+        <div class="container">
+            <iron-pages selected="{{selected}}">
+                <div>
+                    <center>
+                        <h1>Expériences professionnelles en informatique</h1>
+                    </center>
+
+                    <paper-material>
+                        <img src="pictures/Ubisoft.png" style="height:80px; float:left; position:absolute;">
+                        <h3 style="margin-left:120px;">Ubisoft Divertissements</h3>
+                        <span style="font-style:italic; margin-left:120px;">Programmeur outils - Stagiaire</span>
+                    </paper-material>
+                </div>
+                <div>2</div>
+                <div>3</div>
+            </iron-pages>
+        </div>
+    </template>
+
+
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="austindidiertran.js"></script>
+
+    <script>
+        function toggle(selector) {
+            document.querySelector(selector).toggle()
+        }
+    </script>
+</body>
+
+</html>
