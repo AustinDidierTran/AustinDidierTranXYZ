@@ -12,6 +12,8 @@ paper-tabs {
 #title {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 8px;
+  width: 100%;
 }
 paper-material {
   background-color: white;
