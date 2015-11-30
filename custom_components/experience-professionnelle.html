@@ -1,0 +1,43 @@
+<script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-collapse/iron-collapse.html">
+
+<dom-module id="experience-professionnelle">
+
+  <style>
+  
+  </style>
+
+  <template>
+
+    <content>
+    </content>
+  </template>
+</dom-module>
+
+<script>
+  function toggle(selector) {
+    document.querySelector(selector).toggle()
+  }
+  Polymer({
+    is: 'experience-professionnelle',
+    ready: function() {
+      this.elements = [{
+          name: "Pinte de lait",
+          quantity: "1",
+          date: "11/22/2015"
+        }, {
+          name: "Pinte de laid",
+          quantity: "2",
+          date: "11/22/2015"
+        }
+
+      ];
+    },
+    properties: {
+      listId: String
+    }
+
+  });
+</script>
