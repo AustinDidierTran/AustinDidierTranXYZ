@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var path = require('path'),
     rootPath = path.normalize(__dirname);
-var less = require('less');
 
 app.use(express.static(rootPath));
 
