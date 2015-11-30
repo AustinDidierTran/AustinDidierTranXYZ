@@ -16,12 +16,13 @@
     <!-- Iron-Elements imports -->
 
     <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/iron-pages/iron-pages.html">
 
     <!-- Custom-Element imports -->
 
     <!--<link rel="import" href="custom_components/experience-professionnelle.html">-->
-    
+
     <!-- Stylesheets -->
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -39,9 +40,14 @@
             <h1 id="title">Austin-Didier Tran</h1>
         </paper-toolbar>
         <paper-tabs noink no-bar selected="{{selected}}">
-            <paper-tab>Experiences professionnelles</paper-tab>
-            <paper-tab>Connaissances</paper-tab>
-            <paper-tab>Articles de blog</paper-tab>
+            <paper-tab>
+                <iron-icon icon="account-box"></iron-icon>
+                <span style="margin-left:12px;" class="hidden-xs">À propos de moi</span>
+            </paper-tab>
+            <paper-tab>
+                <iron-icon icon="book"></iron-icon>
+                <span style="margin-left:12px;" class="hidden-xs">Blog</span>
+            </paper-tab>
         </paper-tabs>
 
         <div class="container">
