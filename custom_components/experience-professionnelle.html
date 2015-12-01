@@ -1,14 +1,27 @@
-<script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
-
-<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
 
 <dom-module id="experience-professionnelle">
 
   <style>
-  
+
   </style>
 
   <template>
+
+    <paper-material>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <img src={{job.img}} style="width:100%;">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <h3>{{job.company}}</h3>
+          <span style="font-style:italic;">{{job.title}}</span>
+          <br>
+          <span>{{job.timespan}}</span>
+        </div>
+
+      </div>
+    </paper-material>
 
     <content>
     </content>
@@ -16,14 +29,10 @@
 </dom-module>
 
 <script>
-  function toggle(selector) {
-    document.querySelector(selector).toggle()
-  }
   Polymer({
     is: 'experience-professionnelle',
-    
     properties: {
+      job:Object
     }
-
   });
 </script>
