@@ -10,12 +10,20 @@ var init = function() {
 
         template.selected = 0;
 
+        template.tabs = [{
+            "icon": "account-box",
+            "name": "À propos de moi"
+        }, {
+            "icon": "book",
+            "name": "Blog"
+        }]
+
         template.jobs = [{
             "img": "../pictures/Ubisoft.png",
             "company": "Ubisoft Divertissements",
             "title": "Programmeur outils - Stagiaire",
             "timespan": "Hiver 2016"
-        },{
+        }, {
             "img": "../pictures/Tyco.png",
             "company": "Tyco Safety Products",
             "title": "Concepteur logiciel - Stagiaire",

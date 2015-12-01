@@ -22,6 +22,7 @@
     <!-- Custom-Element imports -->
 
     <link rel="import" href="custom_components/experience-professionnelle.html">
+    <link rel="import" href="custom_components/main-title.html">
 
     <!-- Stylesheets -->
 
@@ -38,34 +39,47 @@
 
     <template id="awareness" is="dom-bind">
         <paper-toolbar id="top-toolbar">
-            <img src="pictures/Title.png" id="title">
+            <main-title></main-title>
         </paper-toolbar>
         <paper-tabs noink no-bar selected="{{selected}}">
-            <paper-tab>
-                <iron-icon icon="account-box"></iron-icon>
-                <span style="margin-left:12px;" class="hidden-xs">À propos de moi</span>
-            </paper-tab>
-            <paper-tab>
-                <iron-icon icon="book"></iron-icon>
-                <span style="margin-left:12px;" class="hidden-xs">Blog</span>
-            </paper-tab>
+            <template is="dom-repeat" items="{{tabs}}">
+                <paper-tab>
+                    <iron-icon icon={{item.icon}}></iron-icon>
+                    <span style="margin-left:12px;" class="hidden-xs">{{item.name}}</span>
+                </paper-tab>
+            </template>
         </paper-tabs>
 
         <div class="container">
             <iron-pages selected="{{selected}}">
-                <div>
+                
+                <!-- Onglet À propos de moi -->
+                
+                <div id="about">
                     <center>
                         <h1>Expériences professionnelles en informatique</h1>
                     </center>
-
                     <template is="dom-repeat" items="{{jobs}}">
                         <br>
                         <experience-professionnelle job={{item}}></experience-professionnelle>
                         <br>
                     </template>
                 </div>
-                <div>2</div>
-                <div>3</div>
+                
+                <!-- Onglet Blog -->
+                
+                <div id="blog">
+                    <center>
+                        <h1>Articles de blog</h1>
+                    </center>
+                    
+                    
+                    
+                    <h3>Aucun article pour le moment</h3>
+                </div>
+                
+                
+                
             </iron-pages>
         </div>
     </template>
