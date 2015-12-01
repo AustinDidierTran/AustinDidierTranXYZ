@@ -20,7 +20,7 @@ paper-material {
   background-color: white;
   padding: 50px;
 }
-paper-tab[focused] {
+paper-tab[aria-selected] {
   color: #FFEB3B;
 }
 .heading {
