@@ -20,6 +20,9 @@ paper-material {
   background-color: white;
   padding: 50px;
 }
+paper-tab[focused] {
+  color: #FFEB3B;
+}
 .heading {
   padding: 10px 15px;
   margin-top: 10px;
