@@ -13,10 +13,10 @@ var init = function() {
         template.tabs = [{
             "icon": "account-box",
             "name": "À propos de moi"
-        }, {
+        }/*, {
             "icon": "book",
             "name": "Blog"
-        }];
+        }*/];
 
         template.jobs = [{
             "img": "../pictures/Ubisoft.png",
