@@ -22,6 +22,7 @@
     <!-- Custom-Element imports -->
 
     <link rel="import" href="custom_components/experience-professionnelle.html">
+    <link rel="import" href="custom_components/formation-scolaire.html">
     <link rel="import" href="custom_components/main-title.html">
 
     <!-- Stylesheets -->
@@ -52,10 +53,13 @@
 
         <div class="container">
             <iron-pages selected="{{selected}}">
-                
+
                 <!-- Onglet À propos de moi -->
-                
+
                 <div id="about">
+                    
+                    <!-- Professional Experience -->
+                    
                     <center>
                         <h1>Expériences professionnelles en informatique</h1>
                     </center>
@@ -64,22 +68,33 @@
                         <experience-professionnelle job={{item}}></experience-professionnelle>
                         <br>
                     </template>
+                    
+                    <!-- Education -->
+                    
+                    <center>
+                        <h1>Formation scolaire</h1>
+                    </center>
+                    <template is="dom-repeat" items="{{scolarships}}">
+                        <br>
+                        <formation-scolaire scolarship={{item}}></formation-scolaire>
+                        <br>
+                    </template>
                 </div>
-                
+
                 <!-- Onglet Blog -->
-                
+
                 <div id="blog">
                     <center>
                         <h1>Articles de blog</h1>
                     </center>
-                    
-                    
-                    
+
+
+
                     <h3>Aucun article pour le moment</h3>
                 </div>
-                
-                
-                
+
+
+
             </iron-pages>
         </div>
     </template>

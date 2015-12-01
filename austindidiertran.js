@@ -16,7 +16,7 @@ var init = function() {
         }, {
             "icon": "book",
             "name": "Blog"
-        }]
+        }];
 
         template.jobs = [{
             "img": "../pictures/Ubisoft.png",
@@ -29,6 +29,20 @@ var init = function() {
             "title": "Concepteur logiciel - Stagiaire",
             "timespan": "Été 2015"
         }];
+
+        template.scolarships = [{
+            "img": "../pictures/Udes.png",
+            "institution": "Université de Sherbrooke",
+            "formation": "Génie informatique",
+            "timespan": "Automne 2014 à Automne 2018"
+        }, {
+            "img": "../pictures/Cegep.png",
+            "institution": "Cégep de Sherbrooke",
+            "formation": "Sciences informatiques et mathématiques",
+            "timespan": "Automne 2011 à Automne 2013"
+        }];
+
+        
 
     })
 }
