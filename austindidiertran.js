@@ -14,6 +14,9 @@ var init = function() {
             "icon": "account-box",
             "name": "À propos de moi"
         }, {
+            "icon": "folder",
+            "name": "Projets"
+        }, {
             "icon": "book",
             "name": "Blog"
         }];
