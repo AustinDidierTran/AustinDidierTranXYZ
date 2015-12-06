@@ -22,16 +22,33 @@ var init = function() {
         }];
 
         template.jobs = [{
+            "id": 1,
             "img": "../pictures/Ubisoft.png",
             "company": "Ubisoft Divertissements",
             "title": "Programmeur outils - Stagiaire",
-            "timespan": "Hiver 2016"
-        }, {
+            "timespan": "Hiver 2016",
+            "skills": ["Typescript","HTML","CSS","MongoDB"],
+            "tasks": [
+                "Aider au développement d'un outil servant à afficher les cartes des nombreux jeux de la compagnie"
+    
+                ]
+        }
+        , {
+            "id" : 2,
             "img": "../pictures/Tyco.png",
             "company": "Tyco Safety Products",
             "title": "Concepteur logiciel - Stagiaire",
-            "timespan": "Été 2015"
-        }];
+            "timespan": "Été 2015",
+            "skills": ["MeteorJS", "MongoDB", "AngularJS", "Polymer", "Apache Cordova"],
+            "tasks": [
+                "Développer une application web pouvant monitorer les différentes alarmes",
+                "Développer un serveur qui gère les requêtes de nombreux panneaux",
+                "Développer une application mobile pouvant observer les différentes alarmes",
+                "Gérer les notifications pushs à l'extérieur de l'application, autant sur iOS qu'Android",
+                "Écrire différents scripts afin de préparer l'environnement de développement des futurs stagiaires"
+                ]
+        }
+        ];
 
         template.scolarships = [{
             "img": "../pictures/Udes.png",

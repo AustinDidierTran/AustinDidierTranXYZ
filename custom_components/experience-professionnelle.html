@@ -1,9 +1,14 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
 
 <dom-module id="experience-professionnelle">
 
   <style>
-
+    button {
+      margin-top: 30px;
+    }
   </style>
 
   <template>
@@ -13,11 +18,33 @@
         <div class="col-xs-12 col-sm-4">
           <img src={{job.img}} style="width:100%;">
         </div>
-        <div class="col-xs-12 col-sm-8">
-          <h3>{{job.company}}</h3>
-          <span style="font-style:italic;">{{job.title}}</span>
+        <div class="col-xs-12 col-sm-4">
+          <h4>{{job.company}}</h4>
+          <span style="font-style:italic; font-size:16px;">{{job.title}}</span>
           <br>
           <span>{{job.timespan}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <h4>Compétences techniques</h4>
+          <ul style="margin-left:-20px;"></ul>
+          <template is="dom-repeat" items="{{job.skills}}">
+            <li>{{item}}</li>
+          </template>
+          </ul>
+        </div>
+        <div class="col-xs-12">
+
+          <paper-button id="{{buttonID}}">Voir tâches</paper-button>
+
+          <iron-collapse id="{{collapseID}}" tabindex="0" opened="{{state}}">
+            <ul style="margin-left:-20px;"></ul>
+            <template is="dom-repeat" items="{{job.tasks}}">
+              <li>{{item}}</li>
+            </template>
+            </ul>
+            <!-- <element-epicerie title="{{item.name}}"></element-epicerie>-->
+
+          </iron-collapse>
         </div>
 
       </div>
@@ -29,10 +56,54 @@
 </dom-module>
 
 <script>
+  document.addEventListener("click", function($event) {
+
+    var buttonID = $event.target.id;
+    var collapseID = buttonID.substring(6);
+    var selector = "#collapse" + collapseID;
+
+    $(selector).toggle();
+
+  });
+
+  function toggle() {
+    console.log();
+    document.querySelector('#collapse').toggle();
+  }
   Polymer({
     is: 'experience-professionnelle',
     properties: {
-      job:Object
+      job: Object,
+      buttonID: {
+        type: String,
+        computed: 'computeButtonID(job.id)'
+      },
+      collapseID: {
+        type: String,
+        computed: 'computeCollapseID(job.id)'
+      },
+      state: {
+        type: Boolean,
+        value: false
+      }
+    },
+    computeAriaExpanded: function(id) {
+      return "[[isExpanded(opened" + id + ")]]";
+    },
+    computeAriaControls: function(id) {
+      return "collapse" + id;
+    },
+    computeOnClick: function(id) {
+      return "toggle('#collapse" + id + "')";
+    },
+    computeButtonID: function(id) {
+      return "button" + id;
+    },
+    computeCollapseID: function(id) {
+      return "collapse" + id;
+    },
+    computeOpened: function(id) {
+      return "opened" + id;
     }
   });
 </script>
