@@ -25,9 +25,10 @@
 
     <!-- Custom-Element imports -->
 
-    <link rel="import" href="custom_components/experience-professionnelle.html">
-    <link rel="import" href="custom_components/formation-scolaire.html">
     <link rel="import" href="custom_components/main-title.html">
+    <link rel="import" href="custom_components/personal-project.html">
+    <link rel="import" href="custom_components/professional-experience.html">
+    <link rel="import" href="custom_components/school-education.html">
 
     <!-- Stylesheets -->
 
@@ -70,7 +71,7 @@
                     </center>
                     <template is="dom-repeat" items="{{jobs}}">
                         <br>
-                        <experience-professionnelle job={{item}}></experience-professionnelle>
+                        <professional-experience job={{item}}></professional-experience>
                         <br>
                     </template>
 
@@ -81,7 +82,7 @@
                     </center>
                     <template is="dom-repeat" items="{{scolarships}}">
                         <br>
-                        <formation-scolaire scolarship={{item}}></formation-scolaire>
+                        <school-education scolarship={{item}}></school-education>
                         <br>
                     </template>
                 </div>
@@ -92,28 +93,13 @@
                     <center>
                         <h1>Projets</h1>
                     </center>
-
-
-
-                    <h3>Aucun projet pour le moment</h3>
+                    <template is="dom-repeat" items="{{projects}}">
+                        <br>
+                        <personal-project project={{item}}></personal-project>
+                        <br>
+                    </template>
                 </div>
-
-
-
-                <!-- Onglet Blog -->
-
-                <div id="blog">
-                    <center>
-                        <h1>Blog</h1>
-                    </center>
-
-
-
-                    <h3>Aucun article pour le moment</h3>
-                </div>
-
-
-
+                
             </iron-pages>
         </div>
     </template>

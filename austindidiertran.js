@@ -16,9 +16,6 @@ var init = function() {
         }, {
             "icon": "folder",
             "name": "Projets"
-        }, {
-            "icon": "book",
-            "name": "Blog"
         }];
 
         template.jobs = [{
@@ -51,18 +48,33 @@ var init = function() {
         ];
 
         template.scolarships = [{
+            "id": 3,
             "img": "../pictures/Udes.png",
             "institution": "Université de Sherbrooke",
             "formation": "Génie informatique",
             "timespan": "Automne 2014 à Automne 2018"
         }, {
+            "id": 4,
             "img": "../pictures/Cegep.png",
             "institution": "Cégep de Sherbrooke",
             "formation": "Sciences informatiques et mathématiques",
             "timespan": "Automne 2011 à Automne 2013"
         }];
-
         
-
+        template.projects = [{
+            "id": 5,
+            "img": "../pictures/lzgo.png",
+            "name": "Lzgo.ca",
+            "description": "Contribution au développement d'une plateforme de covoiturage sociale. Écrite à l'aide de React.js.",
+            "url": "https://www.lzgo.ca"
+        },
+        {
+            "id": 6,
+            "img": "../pictures/medium.png",
+            "name": "Medium Blog",
+            "description": "Blog regroupant des articles sur mes expériences personnelles et mes opinions face à des enjeux sociaux.",
+            "url": "https://medium.com/@austindidiertran"
+        }
+        ];
     })
 }

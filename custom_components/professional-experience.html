@@ -3,7 +3,7 @@
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-material/paper-material.html">
 
-<dom-module id="experience-professionnelle">
+<dom-module id="professional-experience">
 
   <style>
     button {
@@ -32,6 +32,7 @@
           </template>
           </ul>
         </div>
+        <!--
         <div class="col-xs-12">
 
           <paper-button id="{{buttonID}}">Voir tâches</paper-button>
@@ -42,11 +43,10 @@
               <li>{{item}}</li>
             </template>
             </ul>
-            <!-- <element-epicerie title="{{item.name}}"></element-epicerie>-->
 
           </iron-collapse>
         </div>
-
+        -->
       </div>
     </paper-material>
 
@@ -71,7 +71,7 @@
     document.querySelector('#collapse').toggle();
   }
   Polymer({
-    is: 'experience-professionnelle',
+    is: 'professional-experience',
     properties: {
       job: Object,
       buttonID: {
