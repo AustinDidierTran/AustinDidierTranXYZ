@@ -74,6 +74,13 @@ var init = function() {
             "name": "Medium Blog",
             "description": "Blog regroupant des articles sur mes expériences personnelles et mes opinions face à des enjeux sociaux.",
             "url": "https://medium.com/@austindidiertran"
+        },
+        {
+            "id": 7,
+            "img": "../pictures/iccm2017.gif",
+            "name": "ICCM 2017",
+            "description": "Site Web officiel de la conférence de l'ICCM 2017.",
+            "url": "http://iccm2017.evenement.usherbrooke.ca/austindidiertran.html#/"
         }
         ];
     })
